@@ -1,0 +1,13 @@
+# Array's Problems:
+|S.No| Problems  | Solution     | Source |
+|:---:| :-------- | :-------: | :--------: |
+| 1| [Search an Element in an array](https://www.geeksforgeeks.org/problems/search-an-element-in-an-array-1587115621/1?utm_source=geeksforgeeks&utm_medium=ml_article_practice_tab&utm_campaign=article_practice_tab) | [Solution](./searchElement.cpp)| GFG |
+| 2| [Second Largest](https://www.geeksforgeeks.org/problems/second-largest3735/1?utm_source=geeksforgeeks&utm_medium=article_practice_tab&utm_campaign=article_practice_tab) | [Solution](./secondLargest.cpp)| GFG |
+| 3| [Missing number in array](https://www.geeksforgeeks.org/problems/missing-number-in-array1416/1?utm_source=geeksforgeeks&utm_medium=article_practice_tab&utm_campaign=article_practice_tab) | [Solution](./missingNo.cpp)| GFG |
+| 4| [Cyclically rotate an array by one](https://www.geeksforgeeks.org/problems/cyclically-rotate-an-array-by-one2614/1?utm_source=geeksforgeeks&utm_medium=article_practice_tab&utm_campaign=article_practice_tab) | [Solution](./cycleRotate.cpp)| GFG |
+| 5| [Smallest Positive missing number](https://practice.geeksforgeeks.org/problems/smallest-positive-missing-number-1587115621/1?utm_source=geeksforgeeks&utm_medium=ml_article_practice_tab&utm_campaign=article_practice_tab) | [Solution](./smalles_positive_missing.cpp) |     GFG      |
+| 6| [Move all negative elements to end](https://practice.geeksforgeeks.org/problems/move-all-negative-elements-to-end1813/1?utm_source=geeksforgeeks&utm_medium=ml_article_practice_tab&utm_campaign=article_practice_tab) | [Solution](./Homework/move_negative_end.cpp) |     GFG      |
+| 7| [Number of occurrence](https://practice.geeksforgeeks.org/problems/number-of-occurrence2259/1?utm_source=geeksforgeeks&utm_medium=article_practice_tab&utm_campaign=article_practice_tab) | [Solution](./Homework/total_occurence.cpp) |     GFG      |
+| 8| [Count number of elements between two given elements](https://practice.geeksforgeeks.org/problems/count-number-of-elements-between-two-given-elements-in-array4044/1?utm_source=geeksforgeeks&utm_medium=ml_article_practice_tab&utm_campaign=article_practice_tab) | [Solution](./Homework/count_elements_btw_two.cpp) |     GFG      |
+| 9| [First Repeating Element](https://practice.geeksforgeeks.org/problems/first-repeating-element4018/1?utm_source=geeksforgeeks&utm_medium=article_practice_tab&utm_campaign=article_practice_tab) | [Solution](./Homework/first_repeating_elem.cpp) |     GFG      |
+| 10| [First Repeating Element](https://leetcode.com/problems/sum-of-unique-elements/) | [Solution](./Homework/sumOfUnique.cpp) |     LeetCode      |
