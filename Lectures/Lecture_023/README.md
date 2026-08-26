@@ -1,0 +1,16 @@
+# Binary Search Problems
+
+| Problems                                                                                                                                                                               |                                                           Solution                                                            |  Source  |
+| :------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | :---------------------------------------------------------------------------------------------------------------------------: | :------: |
+| [34. Find First and Last Position](https://leetcode.com/problems/find-first-and-last-position-of-element-in-sorted-array/)                                                             |    [Solution](./34.cpp)     | leetcode |
+| [35. Search Insert Position](https://leetcode.com/problems/search-insert-position/description/)                                                                                        |      [Solution](./35.cpp)       | leetcode |
+| [69. Sqrt(x)](https://leetcode.com/problems/sqrtx/description/)                                                                                                                        |      [Solution](./69.cpp)       | leetcode |
+| [Count the Zeros](https://practice.geeksforgeeks.org/problems/count-the-zeros2550/1?page=1&difficulty[]=0&category[]=Searching&sortBy=submissions)                                     |  [Solution](./Homework/countZeros.cpp)   |   GFG    |
+| [Number of occurrence](https://www.geeksforgeeks.org/problems/number-of-occurrence2259/1?utm_source=geeksforgeeks&utm_medium=article_practice_tab&utm_campaign=article_practice_tab)   | [Solution](./Homework/NoOfOccurence.cpp) |   GFG    |
+| [Cube root of a number](https://www.geeksforgeeks.org/problems/cube-root-of-a-number0915/1?autm_source=geeksforgeeks&utm_medium=article_practice_tab&utm_campaign=article_practice_tab) |   [Solution](./Homework/cubeRoot.cpp)    |   GFG    |
+
+
+**Q(asked in class)** Time complexity while taking squre root through linear way?
+
+**Ans)** If we directly compute the square root of a number using a straightforward method the time complexity is linear. This means that the number of basic operations required grows proportionally with the input size.
+Specifically, if the input size is n, the time complexity would be `O(n)`.
