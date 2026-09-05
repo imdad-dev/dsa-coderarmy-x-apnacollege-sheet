@@ -1,0 +1,182 @@
+#include <iostream>
+#include <vector>
+#include <algorithm>  // // Required for lower_bound and upper_bound etc
+ 
+
+int main()
+{
+  //------ Create & Declare Vectors ------
+  vector<int> v;        // Empty vector
+  vector<int> v1(5, 1); // Vector with 5 elements, each initialized to 1
+
+  // ------ Size and Capacity ------
+  cout << "Size of v: " << v.size() << endl;
+  cout << "Capacity of v: " << v.capacity() << endl;
+
+  // Adding elements to vector v
+  v.push_back(2);
+  v.push_back(3);
+  v.push_back(10);  // size =3 , capacity = 4
+
+  cout << "Size of v: " << v.size() << endl;
+  cout << "Capacity of v: " << v.capacity() << endl;
+
+  // Update value in vector v
+  v[1] = 5;
+
+  cout << "Size of v1: " << v1.size() << endl;
+  cout << "Capacity of v1: " << v1.capacity() << endl;
+
+  // Adding element to vector v1
+  v1.push_back(8); // size =6 , capacity = 10
+
+  cout << "Size of v1: " << v1.size() << endl;   // 6
+  cout << "Capacity of v1: " << v1.capacity() << endl;  // 10
+
+  // ------ Initialization ------
+  vector<int> v3 = {1, 2, 3, 5, 7}; // Vector initialized with a list of values
+
+  // ----- Delete Value from Vector -----
+  vector<int> vnew;
+  vnew.push_back(41);
+  vnew.push_back(42);
+  vnew.push_back(43);
+  vnew.push_back(64);
+  vnew.push_back(24);
+  vnew.pop_back(); // Remove last element
+
+  cout << "Size of vnew: " << vnew.size() << endl;  // 4
+  cout << "Capacity of vnew: " << vnew.capacity() << endl; // 8
+
+  // Erase element at index 1
+  vnew.erase(vnew.begin() + 1);
+
+  cout << "Size of vnew: " << vnew.size() << endl;
+  cout << "Capacity of vnew: " << vnew.capacity() << endl;
+
+  // Print elements of vnew
+  for (int i = 0; i < vnew.size(); i++)
+    cout << vnew[i] << " ";
+  cout << endl; 
+
+  // ------ Insert Value ------
+  vnew.insert(vnew.begin() + 1, 50); // Insert 50 at index 1
+
+  // Print elements of vnew
+  for (int i = 0; i < vnew.size(); i++)
+    cout << vnew[i] << " ";
+  cout << endl;
+
+  // Update value at index 1
+  vnew[1] = 37;
+
+  // ------ Remove All Elements ------
+  vnew.clear();
+  cout << "Size of vnew: " << vnew.size() << endl;  //0 
+  cout << "Capacity of vnew: " << vnew.capacity() << endl;  // remain same , 8
+
+  // -------- Access Front and Last Elements --------
+  vector<int> arr;
+  arr.push_back(2);
+  arr.push_back(12);
+  arr.push_back(21);
+  arr.push_back(122);
+
+  cout << "First element: " << arr[0] << " " << arr.front() << endl;
+  cout << "Last Element: " << arr[arr.size() - 1] << " " << arr.back() << endl;
+
+  // ------- Copy value  from One Vector to Another -------
+  vector<int> a;
+  a = arr;
+
+  cout << "Size of a: " << a.size() << endl;
+
+  // ----- Another Way of Printing Vector -----
+  for (auto it = arr.begin(); it != arr.end(); it++)
+    cout << *it << " ";
+  cout << endl;
+
+  for (auto i : arr)
+    cout << i << " ";
+  cout << endl;
+
+  //------- Sorting --------
+  vector<int> ans;
+  ans.push_back(5);
+  ans.push_back(235);
+  ans.push_back(15);
+  ans.push_back(54);
+  ans.push_back(125);
+
+  // Sort in increasing order
+  sort(ans.begin(), ans.end());
+
+  for (auto i : ans)
+    cout << i << " ";
+  cout << endl;
+
+  /*
+  // Sort in decreasing order
+  // Method 1:
+  sort(ans.begin(), ans.end(), greater<int>());
+
+  for (auto i : ans)
+      cout << i << " ";
+  cout << endl;
+
+  // Method 2:
+  sort(ans.rbegin(), ans.rend());
+
+  for (auto i : ans)
+      cout << i << " ";
+  cout << endl;
+  */
+
+  //------- Search in Binary Search ---------
+
+  // ans =[5 , 235 , 15 , 54 , 125]
+  cout << "Is 55 present? " << binary_search(ans.begin(), ans.end(), 55) << endl;  // 0 false
+
+  // To get the index in binary search
+  cout << "Index of 54: " << find(ans.begin(), ans.end(), 54) - ans.begin() << endl;
+/*
+//------- sort
+1: sort(v.begin(),v.end());
+2: sort(v.begin(),v.end(),greater<int>());
+
+// search
+1: bool found = binary_search(v.begin(),v.end(),5);
+2: auto it = find(v.begin(),v.end(),6); // First occurance
+
+// count
+int count = count(v.begin(),v.end(),5);
+
+// Max or min
+int maximum = max_element(v.begin(),v.end());
+
+1: lower_bound(first_iterator, last_iterator, x)
+   returns an iterator pointing to the first element
+   in the range [first,last) which has a value
+   not less than x.
+2: upper_bound(first_iterator, last_iterator, x)
+   returns an iterator pointing to the first element
+   in the range [first,last) which has a value greater than x.
+
+
+     std::vector<int> v = {10, 20, 30, 30, 30, 40, 50};
+    int x = 30;
+
+    // 1. Lower Bound: Finds the first element that is >= 30
+    auto lb = std::lower_bound(v.begin(), v.end(), x);
+    
+    // 2. Upper Bound: Finds the first element that is > 30
+    auto ub = std::upper_bound(v.begin(), v.end(), x);
+
+    // Convert iterators to regular array indices
+    std::cout << "Lower bound index: " << (lb - v.begin()) << " (Value: " << *lb << ")\n";   // 2
+
+    std::cout << "Upper bound index: " << (ub - v.begin()) << " (Value: " << *ub << ")\n";    // 5
+
+*/
+  return 0;
+}
